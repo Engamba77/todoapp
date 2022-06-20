@@ -19,9 +19,10 @@ const TodoApp = () => {
       data.push(todo);
       setStore((prev) => [...prev, ...data]);
       setToDo("");
-    } else {
-      alert("Add a Text");
     }
+    // else {
+    //   alert("Add a Text");
+    // }
   };
 
   const onDeleteData = (value) => {
@@ -41,7 +42,7 @@ const TodoApp = () => {
         <Container>
           <HeadOne>TODO APP</HeadOne>
 
-          <form>
+          <form onSubmit={onAddData}>
             <Border>
               <TextList
                 type="text"
@@ -49,10 +50,11 @@ const TodoApp = () => {
                 place="Add a text"
                 value={todo}
                 onChange={onChange}
+                required={true}
               />
               <button
                 type="submit"
-                onClick={onAddData}
+                // onClick={onAddData}
                 style={{ border: "0", padding: "0" }}
               >
                 <StyledAddIcon size="40px" />

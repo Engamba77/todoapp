@@ -7,7 +7,7 @@ export const List = styled.input`
   padding: 10px;
   border-radius: 4px;
   width: 90%;
-  height: 40px;
+  height: 30px;
 `;
 export const Container = styled.div`
   width: 400px;
