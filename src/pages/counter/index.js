@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { NewButton } from "./styled";
-
-export const Container = styled.div`
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-`;
+import { Container } from "./styled";
+import { Head } from "./styled";
+import { Mount } from "./styled";
+import { Zero } from "./styled";
+import { Box } from "./styled";
 
 const Counter = () => {
   // react state
@@ -47,49 +46,17 @@ const Counter = () => {
   return (
     <>
       <Container>
-        <div
-          style={{
-            height: "100%",
-            width: "100%",
-          }}
-        >
+        <Mount>
           <img
-            src="/static/images/mountain.jpg"
+            alt="mountain"
+            src="/images/mountain.jpg"
             style={{ width: "100%", height: "100%" }}
           />
-        </div>
-        <div
-          style={{
-            // border: '1px solid blue',
-            width: "400px",
-            position: "absolute",
-            left: "700px",
-            top: "300px",
-          }}
-        >
-          <h1
-            style={{
-              color: "green",
-              // paddingBottom: "30px",
-              paddingLeft: "40px",
-            }}
-          >
-            Simple Counter
-          </h1>
-          <p
-            style={{
-              color: "green",
-              fontSize: "40px",
-              // paddingBottom: "20px",
-              position: "relative",
-              paddingLeft: "140px",
-            }}
-          >
-            {count}
-          </p>
-
+        </Mount>
+        <Box>
+          <Head>Simple Counter</Head>
+          <Zero>{count}</Zero>
           {minimum ? "Minimum Value is 0" : ""}
-
           <div>
             <NewButton type="Submit" value="Submit" onClick={onDecrease}>
               Decrease
@@ -101,7 +68,7 @@ const Counter = () => {
               Increase
             </NewButton>
           </div>
-        </div>
+        </Box>
       </Container>
     </>
   );

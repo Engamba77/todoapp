@@ -4,7 +4,6 @@ import Category from "../../components/category";
 import Price from "../../components/price";
 import Image from "../../components/img";
 import Title from "../../components/title";
-import Description from "../../components/description";
 
 const FakeProducts = () => {
   const [product, setproduct] = useState();
@@ -48,33 +47,29 @@ const FakeProducts = () => {
 
   return (
     <>
-      <div style={{ border: "3px solid red" }}>
+      <div style={{ border: "0px solid red" }}>
         <div
           style={{
             display: "flex",
             flexDirection: "row",
             flexWrap: "wrap",
             gap: "15px",
-            marginLeft: "12px",
+            marginLeft: "2px",
             marginTop: "5px",
           }}
         >
-          {product?.map(
-            ({ price, title, description, image, category }, index) => {
-              return (
-                <>
-                  {/* Single box */}
-                  <Images key={index} count={3}>
-                    <Category newCategory={category} />
-                    <Price newPrice={price} />
-                    <Image newImage={image} />
-                    <Title newTitle={title} />
-                    {/* <Description newDescription={description} />- */}
-                  </Images>
-                </>
-              );
-            }
-          )}
+          {product?.map(({ price, title, image, category }, index) => {
+            return (
+              <>
+                <Images key={index} count={3}>
+                  <Category newCategory={category} />
+                  <Price newPrice={price} />
+                  <Image newImage={image} />
+                  <Title newTitle={title} />
+                </Images>
+              </>
+            );
+          })}
         </div>
       </div>
       <div style={{ display: "flex", flexDirection: "row" }}>
