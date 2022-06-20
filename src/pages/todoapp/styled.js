@@ -47,6 +47,7 @@ export const Border = styled.div`
 export const StyledAddIcon = styled(RiAddFill)`
   color: white;
   background-color: blueviolet;
+  cursor: pointer;
 `;
 export const DelteIcon = styled(AiFillDelete)`
   color: white;
@@ -54,6 +55,7 @@ export const DelteIcon = styled(AiFillDelete)`
   padding: 5px;
   border-radius: 6px;
   box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.56);
+  cursor: pointer;
 `;
 export const StoredText = styled.div`
   display: flex;

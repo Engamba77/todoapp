@@ -6,6 +6,7 @@ import { Head } from "./styled";
 import { Mount } from "./styled";
 import { Zero } from "./styled";
 import { Box } from "./styled";
+import { StyleImage } from "./styled";
 
 const Counter = () => {
   // react state
@@ -47,11 +48,7 @@ const Counter = () => {
     <>
       <Container>
         <Mount>
-          <img
-            alt="mountain"
-            src="/images/mountain.jpg"
-            style={{ width: "100%", height: "100%" }}
-          />
+          <StyleImage alt="mountain" src="/images/mountain.jpg" />
         </Mount>
         <Box>
           <Head>Simple Counter</Head>

@@ -23,7 +23,7 @@ export const Container = styled.div`
 `;
 export const Head = styled.h1`
   color: green;
-  paddingleft: 12px;
+  padding-left: 12px;
 `;
 export const Mount = styled.div`
   height: 100%;
@@ -45,4 +45,8 @@ export const Box = styled.div`
   position: absolute;
   left: 700px;
   top: 300px;
+`;
+export const StyleImage = styled.img`
+  width: 100%;
+  height: 100%;
 `;
