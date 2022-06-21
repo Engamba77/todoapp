@@ -48,14 +48,20 @@ export const StyledAddIcon = styled(RiAddFill)`
   color: white;
   background-color: blueviolet;
   cursor: pointer;
+  &:hover {
+    background-color: green;
+  }
 `;
 export const DelteIcon = styled(AiFillDelete)`
   color: white;
-  background-color: red;
+  background-color: black;
   padding: 5px;
   border-radius: 6px;
   box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.56);
   cursor: pointer;
+  :hover {
+    background-color: red;
+  }
 `;
 export const StoredText = styled.div`
   display: flex;
