@@ -28,6 +28,11 @@ export const Head = styled.h1`
 export const Mount = styled.div`
   height: 100%;
   width: 100%;
+  @media screen and (max-width: 500px) {
+    .column {
+      width: 100%;
+    }
+  }
 `;
 export const Zero = styled.p`
   color: green;
